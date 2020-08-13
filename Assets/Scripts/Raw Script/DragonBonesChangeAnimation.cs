@@ -24,9 +24,6 @@ public class DragonBonesChangeAnimation : Unit
     public ValueInput loops;
 
     [DoNotSerialize]
-    public ValueInput timeScale;
-
-    [DoNotSerialize]
     public ValueOutput result;
 
     protected override void Definition()
@@ -38,9 +35,6 @@ public class DragonBonesChangeAnimation : Unit
                 .FadeIn(flow.GetValue<string>(animationName), 
                         flow.GetValue<float>(fadeIn), 
                         flow.GetValue<int>(loops));
-            flow.GetValue<UnityArmatureComponent>(armatureComponent)
-                .animation
-                .timeScale = flow.GetValue<float>(timeScale);
             return exit;
         });
         
@@ -50,7 +44,6 @@ public class DragonBonesChangeAnimation : Unit
         animationName = ValueInput<string>("AnimationName", string.Empty);
         fadeIn = ValueInput<float>("FadeIn", 0.0f);
         loops = ValueInput<int>("Loops", -1);
-        timeScale = ValueInput<float>("TimeScale", 1f);
         
         result = ValueOutput<UnityArmatureComponent>("ArmatureComponent", (flow) => {
             return flow.GetValue<UnityArmatureComponent>(armatureComponent);
