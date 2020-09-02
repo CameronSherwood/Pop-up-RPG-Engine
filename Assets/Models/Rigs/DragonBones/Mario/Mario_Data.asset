@@ -15,7 +15,7 @@ MonoBehaviour:
   dataName: Mario
   dragonBonesJSON: {fileID: 4900000, guid: aa1d34e6140e5e34ebc7501941a99758, type: 3}
   textureAtlas:
-  - textureAtlasJSON: {fileID: 4900000, guid: 5e4e560fbc5f00941a67c056e2134c10, type: 3}
-    texture: {fileID: 2800000, guid: 1a9380c5eb1c0fa4a9e09abb2fe5fb55, type: 3}
+  - textureAtlasJSON: {fileID: 4900000, guid: 992c13c3b3af76041b423bef16960610, type: 3}
+    texture: {fileID: 2800000, guid: 8f9781a0d52c8ff4eabd7b5628429c3c, type: 3}
     material: {fileID: 2100000, guid: e28eed57d0c3e0d4bba756a9b465e614, type: 2}
     uiMaterial: {fileID: 0}

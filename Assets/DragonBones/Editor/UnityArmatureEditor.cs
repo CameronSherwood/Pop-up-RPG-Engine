@@ -336,7 +336,7 @@ namespace DragonBones
 
                     // ZSpace
                     EditorGUILayout.BeginHorizontal();
-                    _armatureComponent.zSpace = EditorGUILayout.Slider("Z Space", _armatureComponent.zSpace, 0.0f, 0.5f);
+                    _armatureComponent.zSpace = EditorGUILayout.Slider("Z Space", _armatureComponent.zSpace, -0.5f, 0.5f);
                     EditorGUILayout.EndHorizontal();
                 }
 

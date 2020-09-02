@@ -497,8 +497,10 @@ namespace DragonBones
         {
             get { return _zSpace; }
             set
-            {
-                if (value < 0.0f || float.IsNaN(value))
+            {    
+                // Commented out this statement here to allow
+                // the objects' order to be swapped.
+                if (/*value < 0.0f || */float.IsNaN(value))
                 {
                     value = 0.0f;
                 }
@@ -630,7 +632,7 @@ namespace DragonBones
                     continue;
                 }
 
-                slot._SetZorder(new Vector3(display.transform.localPosition.x, display.transform.localPosition.y, -slot._zOrder * (_zSpace + 0.001f)));
+                slot._SetZorder(new Vector3(display.transform.localPosition.x, display.transform.localPosition.y, -slot._zOrder * (_zSpace/* + 0.001f*/)));
 
                 if (slot.childArmature != null)
                 {
